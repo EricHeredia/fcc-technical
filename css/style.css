@@ -1,15 +1,65 @@
 html {
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 5%;
+  margin-right: 15%;
   font-size: 16px;
 }
 
 header {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.6em; 
+}
+
+ul#nav-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li.nl-item {
+  border: 2px solid black;
+  padding: 8px;
+  margin: 8px 0px;
+}
+
+a.nav-link, a.nav-link:link, a.nav-link:visited {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
 }
 
 code {
   background-color: #DDD;
   font-size: 13px;
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+}
+
+div.main-body {
+  display: grid;
+  grid-template-columns: minmax(300px, auto) 1fr;
+  grid-template-areas: "navbar mainContent"
+}
+
+nav#navbar {
+  grid-area: navbar;
+  position: fixed;
+}
+
+main#main-doc {
+  grid-area: mainContent;
+}
+
+@media screen and (max-width: 750px) {
+  div.main-body {
+    grid-template-columns: 1fr;
+    grid-template-areas: "navbar" "mainContent";
+  }
+
+  nav#navbar {
+    position: inherit;
+  }
 }

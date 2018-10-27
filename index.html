@@ -8,157 +8,158 @@
   <title>Technical Documentation</title>
 </head>
 <body>
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-  <nav id="navbar">
-    <header id="nav-header">Python Documentation</header>
-    <ul id="nav-list">
-      <li class="nl-item"><a href="#Introduction" class="nav-link">Introduction</a></li>
-      <li class="nl-item"><a href="#Variables" class="nav-link">Variables</a></li>
-      <li class="nl-item"><a href="#if...else_statement" class="nav-link">if...else statement</a></li>
-      <li class="nl-item"><a href="#while_statement" class="nav-link">while statement</a></li>
-      <li class="nl-item"><a href="#for_loops" class="nav-link">for loops</a></li>
-      <li class="nl-item"><a href="#Function_declarations" class="nav-link">Function declarations</a></li>
-      <li class="nl-item"><a href="#Reference" class="nav-link">Reference</a></li>
-    </ul>
-  </nav>
-  <main id="main-doc">
-    <section id="Introduction" class="main-section">
-      <header>Introduction</header>
-      <p>Python is a popular programming language. It was created in 1991 by Guido van Rossum.</p>
-      <p>It is used for:</p>
-      <ul>
-        <li>web development (server-side),</li>
-        <li>software development,</li>
-        <li>mathematics,</li>
-        <li>system scripting.</li>
+  <div class="main-body">
+    <nav id="navbar">
+      <header id="nav-header">Python Documentation</header>
+      <ul id="nav-list">
+        <a href="#Introduction" class="nav-link"><li class="nl-item">Introduction</li></a>
+        <a href="#Variables" class="nav-link"><li class="nl-item">Variables</li></a>
+        <a href="#if...else_statement" class="nav-link"><li class="nl-item">if...else statement</li></a>
+        <a href="#while_statement" class="nav-link"><li class="nl-item">while statement</li></a>
+        <a href="#for_loops" class="nav-link"><li class="nl-item">for loops</li></a>
+        <a href="#Function_declarations" class="nav-link"><li class="nl-item">Function declarations</li></a>
+        <a href="#Reference" class="nav-link"><li class="nl-item">Reference</li></a>
       </ul>
-      <p>Python was designed to for readability, and has some similarities to the English language with influence from mathematics. It uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses. Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.</p>
-    </section>
-    <section id="Variables" class="main-section">
-      <header>Variables</header>
-      <p>Unlike other programming languages, Python has no command for declaring a variable.</p>
-      <p>A variable is created the moment you first assign a value to it.</p>
-      <code>
-        x = 5
-        y = "John"
-      </code>
-      <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:</p>
-      <ul>
-        <li>A variable name must start with a letter or the underscore character</li>
-        <li>A variable name cannot start with a number</li>
-        <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
-        <li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
-      </ul>
-    </section>
-    <section id="if...else_statement" class="main-section">
-      <header>if...else statement</header>
-      <p>Python supports the usual logical conditions from mathematics:</p>
-      <ul>
-        <li>Equals: a == b</li>
-        <li>Not Equals: a != b</li>
-        <li>Less than: a < b</li>
-        <li>Less than or equal to: a <= b</li>
-        <li>Greater than: a > b</li>
-        <li>Greater than or equal to: a >= b</li>
-      </ul>
-      <p>These conditions can be used in several ways, most commonly in "if statements" and loops.</p>
-      <p>An "if statement" is written by using the if keyword.</p>
-      <code>
-        a = 33
-        b = 200
-        if b > a:
-          print("b is greater than a")
-      </code>
-      <p>The else keyword catches anything which isn't caught by the preceding conditions.</p>
-      <code>
-        a = 200
-        b = 33
-        if b > a:
-          print("b is greater than a")
-        else:
-          print("a is greater than b")
-      </code>
-    </section>
-    <section id="while_statement" class="main-section">
-      <header>while statement</header>
-      <p>Python has two primitive loop commands:</p>
-      <ol>
-        <li>while loops</li>
-        <li>for loops</li>
-      </ol>
-      <p>With the while loop we can execute a set of statements as long as a condition is true.</p>
-      <code>
-        i = 1
-        while i < 6:
-          print(i)
-          i += 1
-      </code>
-      <p>The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, i, which we set to 1.</p>
-    </section>
-    <section id="for_loops" class="main-section">
-      <header>for loops</header>
-      <p>A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).</p>
-      <p>This is less like the for keyword in other programming language, and works more like an iterator method as found in other object-orientated programming languages.</p>
-      <p>With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.</p>
-      <code>
-        fruits = ["apple", "banana", "cherry"]
-        for x in fruits:
-          print(x)
-      </code>
-      <p>Even strings are iterable objects, they contain a sequence of characters:</p>
-      <code>
-        for x in "banana":
-          print(x)
-      </code>
-      <p>To loop through a set of code a specified number of times, we can use the range() function,</p>
-      <p>The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number.</p>
-      <code>
-        for x in range(6):
-          print(x)
-      </code>
-    </section>
-    <section id="Function_declarations" class="main-section">
-      <header>Function declarations</header>
-      <p>A function is a block of code which only runs when it is called.</p>
-      <p>You can pass data, known as parameters, into a function.</p>
-      <p>A function can return data as a result.</p>
-      <p>In Python a function is defined using the def keyword:</p>
-      <code>
-        def my_function():
-          print("Hello from a function")
-      </code>
-      <p>To call a function, use the function name followed by parenthesis:</p>
-      <code>
-        def my_functino():
-          print("Hello from a function")
-        
-          my_function()
-      </code>
-      <p>Information can be passed to functions as parameter.</p>
-      <p>Parameters are specified after the function name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.</p>
-      <p>The following example has a function with one parameter (fname). When the function is called, we pass along a first name, which is used inside the function to print the full name:</p>
-      <code>
-        def my_function(fname):
-          print(fname + " Refsnes")
-        
-        my_function("Emil")
-        my_function("Tobias")
-        my_function("Linus")
-      </code>
-      <p>To let a function return a value, use the return statement:</p>
-      <code>
-        def my_function(x):
-          return 5 * x
-        
-          print(my_function(3))
-          print(my_function(5))
-          print(my_function(9))
-      </code>
-    </section>
-    <section id="Reference" class="main-section">
-      <header>Reference</header>
-      <p>All the documentation in this page is taken from <a href="https://www.w3schools.com/python/" target="_blank">w3schools.com</a></p>
-    </section>
-  </main>
+    </nav>
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <p>Python is a popular programming language. It was created in 1991 by Guido van Rossum.</p>
+        <p>It is used for:</p>
+        <ul>
+          <li>web development (server-side),</li>
+          <li>software development,</li>
+          <li>mathematics,</li>
+          <li>system scripting.</li>
+        </ul>
+        <p>Python was designed to for readability, and has some similarities to the English language with influence from mathematics. It uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses. Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.</p>
+      </section>
+      <section id="Variables" class="main-section">
+        <header>Variables</header>
+        <p>Unlike other programming languages, Python has no command for declaring a variable.</p>
+        <p>A variable is created the moment you first assign a value to it.</p>
+        <code>
+          x = 5
+          y = "John"
+        </code>
+        <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:</p>
+        <ul>
+          <li>A variable name must start with a letter or the underscore character</li>
+          <li>A variable name cannot start with a number</li>
+          <li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+          <li>Variable names are case-sensitive (age, Age and AGE are three different variables)</li>
+        </ul>
+      </section>
+      <section id="if...else_statement" class="main-section">
+        <header>if...else statement</header>
+        <p>Python supports the usual logical conditions from mathematics:</p>
+        <ul>
+          <li>Equals: a == b</li>
+          <li>Not Equals: a != b</li>
+          <li>Less than: a < b</li>
+          <li>Less than or equal to: a <= b</li>
+          <li>Greater than: a > b</li>
+          <li>Greater than or equal to: a >= b</li>
+        </ul>
+        <p>These conditions can be used in several ways, most commonly in "if statements" and loops.</p>
+        <p>An "if statement" is written by using the if keyword.</p>
+        <code>
+          a = 33
+          b = 200
+          if b > a:
+            print("b is greater than a")
+        </code>
+        <p>The else keyword catches anything which isn't caught by the preceding conditions.</p>
+        <code>
+          a = 200
+          b = 33
+          if b > a:
+            print("b is greater than a")
+          else:
+            print("a is greater than b")
+        </code>
+      </section>
+      <section id="while_statement" class="main-section">
+        <header>while statement</header>
+        <p>Python has two primitive loop commands:</p>
+        <ol>
+          <li>while loops</li>
+          <li>for loops</li>
+        </ol>
+        <p>With the while loop we can execute a set of statements as long as a condition is true.</p>
+        <code>
+          i = 1
+          while i < 6:
+            print(i)
+            i += 1
+        </code>
+        <p>The while loop requires relevant variables to be ready, in this example we need to define an indexing variable, i, which we set to 1.</p>
+      </section>
+      <section id="for_loops" class="main-section">
+        <header>for loops</header>
+        <p>A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).</p>
+        <p>This is less like the for keyword in other programming language, and works more like an iterator method as found in other object-orientated programming languages.</p>
+        <p>With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.</p>
+        <code>
+          fruits = ["apple", "banana", "cherry"]
+          for x in fruits:
+            print(x)
+        </code>
+        <p>Even strings are iterable objects, they contain a sequence of characters:</p>
+        <code>
+          for x in "banana":
+            print(x)
+        </code>
+        <p>To loop through a set of code a specified number of times, we can use the range() function,</p>
+        <p>The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number.</p>
+        <code>
+          for x in range(6):
+            print(x)
+        </code>
+      </section>
+      <section id="Function_declarations" class="main-section">
+        <header>Function declarations</header>
+        <p>A function is a block of code which only runs when it is called.</p>
+        <p>You can pass data, known as parameters, into a function.</p>
+        <p>A function can return data as a result.</p>
+        <p>In Python a function is defined using the def keyword:</p>
+        <code>
+          def my_function():
+            print("Hello from a function")
+        </code>
+        <p>To call a function, use the function name followed by parenthesis:</p>
+        <code>
+          def my_functino():
+            print("Hello from a function")
+          
+            my_function()
+        </code>
+        <p>Information can be passed to functions as parameter.</p>
+        <p>Parameters are specified after the function name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.</p>
+        <p>The following example has a function with one parameter (fname). When the function is called, we pass along a first name, which is used inside the function to print the full name:</p>
+        <code>
+          def my_function(fname):
+            print(fname + " Refsnes")
+          
+          my_function("Emil")
+          my_function("Tobias")
+          my_function("Linus")
+        </code>
+        <p>To let a function return a value, use the return statement:</p>
+        <code>
+          def my_function(x):
+            return 5 * x
+          
+            print(my_function(3))
+            print(my_function(5))
+            print(my_function(9))
+        </code>
+      </section>
+      <section id="Reference" class="main-section">
+        <header>Reference</header>
+        <p>All the documentation in this page is taken from <a href="https://www.w3schools.com/python/" target="_blank">w3schools.com</a></p>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
