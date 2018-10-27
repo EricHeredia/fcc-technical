@@ -1,0 +1,15 @@
+html {
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 16px;
+}
+
+header {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+code {
+  background-color: #DDD;
+  font-size: 13px;
+}
